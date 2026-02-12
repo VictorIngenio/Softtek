@@ -4,6 +4,8 @@ import { ListarLibrosComponent } from './pages/listar-libros/listar-libros.compo
 import { ListarAutoresComponent } from './pages/listar-autores/listar-autores.component';
 import { CrearAutoresComponent } from './pages/crear-autores/crear-autores.component';
 import { CrearLibrosComponent } from './pages/crear-libros/crear-libros.component';
+import { EditarAutorComponent } from './pages/editar-autor/editar-autor.component';
+import { EditarLibroComponent } from './pages/editar-libro/editar-libro.component';
 
 export const routes: Routes = [
     { path: '', component: PrincipalComponent },
@@ -11,5 +13,8 @@ export const routes: Routes = [
     { path: 'listar-libros', component: ListarLibrosComponent },
     { path: 'listar-autores', component: ListarAutoresComponent },
     { path: 'crear-autor', component: CrearAutoresComponent },
-    { path: 'crear-libro', component: CrearLibrosComponent }
+    { path: 'crear-libro', component: CrearLibrosComponent },
+    { path: 'editar-autor/:id', component: EditarAutorComponent },
+    { path: 'editar-libro/:id', component: EditarLibroComponent },
+    { path: '**', redirectTo: 'principal', pathMatch: 'full' }
 ];

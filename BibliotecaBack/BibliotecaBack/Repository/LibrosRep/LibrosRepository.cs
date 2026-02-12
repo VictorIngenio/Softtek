@@ -55,7 +55,7 @@ namespace BibliotecaBack.Repository.LibrosRep
                 List<LibrosLista> consulta = new();
 
                 consulta = (from lib in _context.Libros
-                            join aut in _context.Autors on lib.Id equals aut.Id
+                            join aut in _context.Autors on lib.IdAutor equals aut.Id
                             select new LibrosLista 
                             {
                                 Id = lib.Id,

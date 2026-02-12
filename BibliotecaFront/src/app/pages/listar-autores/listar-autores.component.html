@@ -10,6 +10,7 @@
                 <th>Fecha Nacimiento</th>
                 <th>Ciudad Procedencia</th>
                 <th>Correo Electrónico</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
                 <td>{{ item.fechaNacimiento }}</td>
                 <td>{{ item.ciudadProcedencia }}</td>
                 <td>{{ item.correoElectronico }}</td>
+                <td><a class="text-primary" [routerLink]="['/editar-autor', item.id]"><i class="fa-solid fa-marker fa-2x"></i></a></td>
             </tr>
         </tbody>
     </table>

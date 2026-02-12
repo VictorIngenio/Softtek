@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AutoresService } from '../../services/autores.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Autores } from '../../models/autores.models';
 
 @Component({
   selector: 'app-listar-autores',
   standalone: true,
   imports: [
-    CommonModule
-  ],
+    CommonModule,
+    RouterLink
+],
   templateUrl: './listar-autores.component.html',
   styleUrl: './listar-autores.component.css'
 })

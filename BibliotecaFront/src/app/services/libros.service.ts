@@ -23,4 +23,8 @@ export class LibrosService {
   traerLibro(id: number): Observable<Libros> {
     return this.http.get<Libros>(`${ this.URL }/TraerLibro/${ id }`);
   }
+
+  actualizarLibro(libro: Libros): Observable<void> {
+    return this.http.put<void>(`${ this.URL }/ActualizarLibro`, libro);
+  }
 }

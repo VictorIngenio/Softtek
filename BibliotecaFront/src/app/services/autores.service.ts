@@ -22,4 +22,8 @@ export class AutoresService {
   traerAutor(id: number): Observable<Autores> {
     return this.http.get<Autores>(`${ this.URL }/TraerAutor/${ id }`);
   }
+
+  actualizarAutor(autor: Autores): Observable<void> {
+    return this.http.put<void>(`${ this.URL }/ActualizarAutor`, autor);
+  }
 }
