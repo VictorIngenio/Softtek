@@ -1,0 +1,30 @@
+<div class="text-center mt-3 mb-5">
+    <h1>Libros</h1>
+</div>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Título</th>
+                <th>Año</th>
+                <th>Genero</th>
+                <th>Número Páginas</th>
+                <th>Autor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of libros">
+                <td>{{ item.id }}</td>
+                <td>{{ item.titulo }}</td>
+                <td>{{ item.anno }}</td>
+                <td>{{ item.genero }}</td>
+                <td>{{ item.numeroPaginas }}</td>
+                <td>{{ item.autor }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center">
+    <button class="btn btn-primary mt-2" (click)="regresar()">Regresar</button>
+</div>
